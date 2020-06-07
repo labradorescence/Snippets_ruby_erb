@@ -1,0 +1,209 @@
+	//if statement
+	"if": {
+        "prefix": "if",
+        "body": ["if ${1:condition}",
+                    "\t$0",
+                    "end"],
+        "description": "if … end",
+        "scope": "source.ruby"
+    },
+    "ife": {
+        "prefix": "ife",
+        "body": "if ${1:condition}\n\t$2\nelse\n\t$3\nend",
+        "description": "if … else … end",
+        "scope": "source.ruby"
+	},
+	"elsif": {
+        "prefix": "elsif",
+        "body": "elsif ${1:condition}\n\t$0",
+        "description": "elsif ...",
+        "scope": "source.ruby"
+	},
+	"if elsif": {
+        "prefix": "ifelsif",
+        "body": [
+			"if ${1:condition}",
+			"\t$2",
+			"elsif $3",
+			"\t$4",
+			"else",
+			"\t$5",
+			"end"
+		],
+		"description": "if … elsif … else … end",
+        "scope": "source.ruby"
+	},
+
+	//attribute accessors, instance variable
+    "attr reader": {
+        "prefix": "r",
+        "body": "attr_reader :${0:attr_names}",
+        "description": "attr_reader ..",
+        "scope": "source.ruby"
+	},
+	
+	"attr writer": {
+        "prefix": "w",
+        "body": "attr_writer :${0:attr_names}",
+        "description": "attr_writer ..",
+        "scope": "source.ruby"
+	},
+	
+	"attr accessor": {
+        "prefix": "attra",
+		"body": "attr_accessor :${0:attr_names}",
+        "description": "attr_accessor ..",
+        "scope": "source.ruby"
+	},
+
+
+
+//iteration
+	"do": {
+		"prefix": "do",
+		"body": [
+			"do |$1|",
+			"\t$2"
+			"end"
+		]
+	},
+	"loo": {
+        "prefix": "loo",
+        "body": "loop { $0 }",
+        "description": "loop { .. }",
+        "scope": "source.ruby"
+    },
+    "map": {
+        "prefix": "map",
+        "body": "map { |${1:e}| $0 }",
+        "description": "map { |e| .. }",
+        "scope": "source.ruby"
+	},
+	"ea": {
+        "prefix": "ea",
+        "body": "each { |${1:e}| $0 }",
+        "description": "each { |e| .. }",
+        "scope": "source.ruby"
+	},
+	"eacha": {
+        "prefix": "eac-",
+        "body": "each_char { |${1:chr}| $0 }",
+        "description": "each_char { |chr| .. }",
+        "scope": "source.ruby"
+    },
+	"eav": {
+        "prefix": "eav",
+        "body": "each_value { |${1:val}| $0 }",
+        "description": "each_value { |val| .. }",
+        "scope": "source.ruby"
+	},
+	"eai": {
+        "prefix": "eai",
+        "body": "each_index { |${1:i}| $0 }",
+        "description": "each_index { |i| .. }",
+        "scope": "source.ruby"
+    },
+    "eak": {
+        "prefix": "eak",
+        "body": "each_key { |${1:key}| $0 }",
+        "description": "each_key { |key| .. }",
+        "scope": "source.ruby"
+    },
+    "eal": {
+        "prefix": "eal",
+        "body": "each_line$1 { |${2:line}| $0 }",
+        "description": "each_line { |line| .. }",
+        "scope": "source.ruby"
+    },
+    "eap": {
+        "prefix": "eap",
+        "body": "each_pair { |${1:name}, ${2:val}| $0 }",
+        "description": "each_pair { |name, val| .. }",
+        "scope": "source.ruby"
+    },
+    "eas-": {
+        "prefix": "eas-",
+        "body": "each_slice(${1:2}) { |${2:group}| $0 }",
+        "description": "each_slice(..) { |group| .. }",
+        "scope": "source.ruby"
+	},
+	"deli": {
+        "prefix": "deli",
+        "body": "delete_if { |${1:e}| $0 }",
+        "description": "delete_if { |e| .. }",
+        "scope": "source.ruby"
+    },
+    "det": {
+        "prefix": "det",
+        "body": "detect { |${1:e}| $0 }",
+		"description": "detect { |e| .. }",
+	},
+	"any": {
+        "prefix": "any",
+        "body": "any? { |${1:e}| $0 }",
+        "description": "any? { |e| .. }",
+        "scope": "source.ruby"
+    },
+
+	//find
+	"fin": {
+        "prefix": "fin",
+        "body": "find { |${1:e}| $0 }",
+        "description": "find { |e| .. }",
+        "scope": "source.ruby"
+    },
+    "fina": {
+        "prefix": "fina",
+        "body": "find_all { |${1:e}| $0 }",
+        "description": "find_all { |e| .. }",
+        "scope": "source.ruby"
+	},
+
+	//initialize
+	"initialize": {
+        "prefix": "defi",
+        "body": [
+            "def initialize(${1:argument})",
+            "\t@${2:argument} = ${3:argument}",
+            "end"
+        ]
+	},
+
+	"define method": {
+        "prefix": "def",
+        "body": [
+			"def ${1:name}",
+			"\t$2"
+            "end"
+        ]
+	},
+	"define class": {
+        "prefix": "class",
+        "body": [
+			"class ${1:name}",
+			"\t$0"
+            "end"
+        ]
+	},
+
+	//hash	
+	"Hash": {
+        "prefix": "Hash",
+        "body": "Hash.new { |${1:hash}, ${2:key}| ${1:hash}[${2:key}] = $0 }",
+        "description": "Hash.new { |hash, key| hash[key] = .. }",
+        "scope": "source.ruby"
+	},
+	
+	//mix max
+	"max": {
+        "prefix": "max",
+        "body": "max { |a, b| $0 }",
+        "description": "max { |a, b| .. }",
+        "scope": "source.ruby"
+    },
+    "min": {
+        "prefix": "min",
+        "body": "min { |a, b| $0 }",
+        "description": "min { |a, b| .. }",
+        "scope": "source.ruby"
+	}
