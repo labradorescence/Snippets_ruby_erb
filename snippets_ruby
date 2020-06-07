@@ -208,26 +208,28 @@
         "description": "min { |a, b| .. }",
         "scope": "source.ruby"
 	}
-		"scripting tag icecream cone tag" : {
-		"prefix": "erbicecream",
-		"body": [
-			"<% $1 %>"
+	
+	//erb tags
+	"scripting tag icecream cone tag" : {
+	"prefix": "erbicecream",
+	"body": [
+		"<% $1 %>"
 		],
-		"description": "Inserts erb scripting tag snowcones."
+	"description": "Inserts erb scripting tag snowcones."
 	},
 
 	"substitution tag(squid tag)" : {
-		"prefix": "erbsub", 
-		"body": [
-			"<%= $1 %>"
+	"prefix": "erbsub", 
+	"body": [
+		"<%= $1 %>"
 		],
-		"description": "Inserts erb substitution tag"
+	"description": "Inserts erb substitution tag"
 	},
 
 	"erb comment" : {
-		"prefix": "erbcmmt", 
-		"body": [
-			"<%# $1 %>"
+	"prefix": "erbcmmt", 
+	"body": [
+		"<%# $1 %>"
 		],
-		"description": "Inserts an erb comment tag"
+	"description": "Inserts an erb comment tag"
 	}
