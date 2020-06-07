@@ -1,0 +1,23 @@
+	"scripting tag (icecream cone tag)" : {
+		"prefix": "erbicecream",
+		"body": [
+			"<% $1 %>"
+		],
+		"description": "Inserts erb scripting tag snowcones."
+	},
+
+	"substitution tag(squid tag)" : {
+		"prefix": "erbsub", 
+		"body": [
+			"<%= $1 %>"
+		],
+		"description": "Inserts erb substitution tag"
+	},
+
+	"erb comment" : {
+		"prefix": "erbcmmt", 
+		"body": [
+			"<%# $1 %>"
+		],
+		"description": "Inserts an erb comment tag"
+	}
