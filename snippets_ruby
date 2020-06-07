@@ -6,8 +6,8 @@
                     "end"],
         "description": "if … end",
         "scope": "source.ruby"
-    },
-    "ife": {
+    	},
+    	"ife": {
         "prefix": "ife",
         "body": "if ${1:condition}\n\t$2\nelse\n\t$3\nend",
         "description": "if … else … end",
@@ -22,20 +22,20 @@
 	"if elsif": {
         "prefix": "ifelsif",
         "body": [
-			"if ${1:condition}",
-			"\t$2",
-			"elsif $3",
-			"\t$4",
-			"else",
-			"\t$5",
-			"end"
+		"if ${1:condition}",
+		"\t$2",
+		"elsif $3",
+		"\t$4",
+		"else",
+		"\t$5",
+		"end"
 		],
-		"description": "if … elsif … else … end",
+	"description": "if … elsif … else … end",
         "scope": "source.ruby"
 	},
 
 	//attribute accessors, instance variable
-    "attr reader": {
+    	"attr reader": {
         "prefix": "r",
         "body": "attr_reader :${0:attr_names}",
         "description": "attr_reader ..",
@@ -58,13 +58,13 @@
 
 
 
-//iteration
+	//iteration
 	"do": {
-		"prefix": "do",
-		"body": [
-			"do |$1|",
-			"\t$2"
-			"end"
+	"prefix": "do",
+	"body": [
+		"do |$1|",
+		"\t$2"
+		"end"
 		]
 	},
 	"loo": {
@@ -72,8 +72,8 @@
         "body": "loop { $0 }",
         "description": "loop { .. }",
         "scope": "source.ruby"
-    },
-    "map": {
+    	},
+    	"map": {
         "prefix": "map",
         "body": "map { |${1:e}| $0 }",
         "description": "map { |e| .. }",
@@ -90,7 +90,7 @@
         "body": "each_char { |${1:chr}| $0 }",
         "description": "each_char { |chr| .. }",
         "scope": "source.ruby"
-    },
+    	},
 	"eav": {
         "prefix": "eav",
         "body": "each_value { |${1:val}| $0 }",
@@ -102,14 +102,14 @@
         "body": "each_index { |${1:i}| $0 }",
         "description": "each_index { |i| .. }",
         "scope": "source.ruby"
-    },
-    "eak": {
+    	},
+    	"eak": {
         "prefix": "eak",
         "body": "each_key { |${1:key}| $0 }",
         "description": "each_key { |key| .. }",
         "scope": "source.ruby"
-    },
-    "eal": {
+    	},
+    	"eal": {
         "prefix": "eal",
         "body": "each_line$1 { |${2:line}| $0 }",
         "description": "each_line { |line| .. }",
@@ -120,8 +120,8 @@
         "body": "each_pair { |${1:name}, ${2:val}| $0 }",
         "description": "each_pair { |name, val| .. }",
         "scope": "source.ruby"
-    },
-    "eas-": {
+   	 },
+    	"eas-": {
         "prefix": "eas-",
         "body": "each_slice(${1:2}) { |${2:group}| $0 }",
         "description": "each_slice(..) { |group| .. }",
@@ -132,8 +132,8 @@
         "body": "delete_if { |${1:e}| $0 }",
         "description": "delete_if { |e| .. }",
         "scope": "source.ruby"
-    },
-    "det": {
+    	},
+    	"det": {
         "prefix": "det",
         "body": "detect { |${1:e}| $0 }",
 		"description": "detect { |e| .. }",
@@ -143,7 +143,7 @@
         "body": "any? { |${1:e}| $0 }",
         "description": "any? { |e| .. }",
         "scope": "source.ruby"
-    },
+    	},
 
 	//find
 	"fin": {
@@ -151,13 +151,14 @@
         "body": "find { |${1:e}| $0 }",
         "description": "find { |e| .. }",
         "scope": "source.ruby"
-    },
-    "fina": {
+    	},
+    	"fina": {
         "prefix": "fina",
         "body": "find_all { |${1:e}| $0 }",
         "description": "find_all { |e| .. }",
         "scope": "source.ruby"
 	},
+
 
 	//initialize
 	"initialize": {
@@ -168,23 +169,23 @@
             "end"
         ]
 	},
-
 	"define method": {
         "prefix": "def",
         "body": [
-			"def ${1:name}",
-			"\t$2"
+		"def ${1:name}",
+		"\t$2"
             "end"
         ]
 	},
 	"define class": {
         "prefix": "class",
         "body": [
-			"class ${1:name}",
-			"\t$0"
+		"class ${1:name}",
+		"\t$0"
             "end"
         ]
 	},
+
 
 	//hash	
 	"Hash": {
@@ -200,8 +201,8 @@
         "body": "max { |a, b| $0 }",
         "description": "max { |a, b| .. }",
         "scope": "source.ruby"
-    },
-    "min": {
+    	},
+  	  "min": {
         "prefix": "min",
         "body": "min { |a, b| $0 }",
         "description": "min { |a, b| .. }",
