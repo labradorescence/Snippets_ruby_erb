@@ -202,9 +202,32 @@
         "description": "max { |a, b| .. }",
         "scope": "source.ruby"
     	},
-  	  "min": {
+  	"min": {
         "prefix": "min",
         "body": "min { |a, b| $0 }",
         "description": "min { |a, b| .. }",
         "scope": "source.ruby"
+	}
+		"scripting tag icecream cone tag" : {
+		"prefix": "erbicecream",
+		"body": [
+			"<% $1 %>"
+		],
+		"description": "Inserts erb scripting tag snowcones."
+	},
+
+	"substitution tag(squid tag)" : {
+		"prefix": "erbsub", 
+		"body": [
+			"<%= $1 %>"
+		],
+		"description": "Inserts erb substitution tag"
+	},
+
+	"erb comment" : {
+		"prefix": "erbcmmt", 
+		"body": [
+			"<%# $1 %>"
+		],
+		"description": "Inserts an erb comment tag"
 	}
